@@ -1,0 +1,10 @@
+html, #root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f9f9f9;
+  height: 98%;
+}

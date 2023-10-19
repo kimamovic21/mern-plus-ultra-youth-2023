@@ -1,0 +1,96 @@
+# Introduction to MERN Stack - Plus Ultra Youth 2023
+## Project Bug Report Tool 
+
+### Day 1
+-kreiramo dva foldera client i server
+-kreiramo README.md i .gitignore fajlove
+-u terminalu udemo u folder server cd server
+-u terminal ukucamo komandu npm init
+-u folderu server kreiramo index.js fajl
+-u terminalu instaliramo paket express
+-u terminal ukucamo komandu npm i express
+-otvorimo web stranicu https://expressjs.com/
+-u index.js kopiramo boilerplate kode
+-u terminal ukucamo komandu node index.js
+-o pretrazivac ukucamo http://localhost:3000/
+-u package.json fajl dodajemo type": "module"
+-u package.json fajl dodajemo "dev": "node index.js"
+-u terminalu instaliramo paket nodemon
+-u terminal ukucamo komandu npm install --save-dev nodemon
+-u package.json fajl dodajemo "dev": "nodemon index.js"
+-otvorimo Postman i kreiramo novi kolekciju bug-report-tool
+-u kolekciji bug-report-tool kreiramo novu GET rutu
+-u terminalu instaliramo paket body parser
+-u terminalu instaliramo paket mongoose
+-u terminal ukucamo komando npm install mongoose --save
+-pokrenemo bazu podataka u cmd
+-u folderu server kreiramo folder routes
+-u folderu routes kreiramo fajlove auth.routes.js i bug.routes.js
+-u auth.routes.js fajl kreiramo varijablu const router
+-kreiramo router.post('/register', register)
+-eksportujemo varijablu router
+-u index.js importujemo varijablu router kao authRoutes
+-u index.js fajl dodajemo app.use('auth', authRoutes)
+-u Postmanu kreiramo zahtjev POST http://localhost:4000/auth/register
+-kreiramo folder controllers
+-u controllers folderu kreiramo auth.controller.js fajl
+-u auth.controller.js fajlu kreiramo funkciju register() sa parametrim req i res
+-u auth.routes.js fajl importujemo funkciju register()
+-u auth.controller.js fajlu kreiramo funkciju login()
+-u auth.router.js fajl importujemo funkciju login()
+-kreiramo router.post('/login', login)
+-kreiramo folder models
+-u folderu models kreiramo User.model.js fajl sa velikim pocetnik slovom
+-u folderu models kreiramo Bug.model.js fajl
+-u User.model.js fajl importujemo mongoose
+-importujemo Schema iz mongoose
+-kreiramo new Schema({ ... })
+-kreiramo varijablu const userSchema
+-kreiramo i eksportujemo varijablu const User
+-u auth.controller.js fajlu, u funkciji register, kreiramo varijable data i user
+-u terminalu instaliramo paket bcrypt
+-u terminal ukucamo komandu npm install bcrypt
+-kreiramo constants.js fajl
+-u constants.js fajlu kreiramo varijablu const SALT_ROUNDS
+-u auth.controller.js fajl importujemo bcrypt
+-kreiramo varijable password i data
+-kreiramo const varijablu hashedPassword
+-kreiramo folder dao
+-u folderu dao kreiramo user.dao.js fajl
+-u user.dao.js fajlu kreiramo asinhronu funkciju getUserByEmail sa parametrom email
+-u funkciju getUserByEmail dodajemo try - catch blokove koda
+-u try bloku koda kreiramo varijablu const user
+-u terminalu instaliramo paket jsonwebtoken
+-u constants.js fajlu kreiramo varijablu const SECRET
+-otvorimo web stranicu json web token
+
+
+### Day 2
+-u bug.controller.js fajlu kreiramo funkciju getBugsByUserId
+-u funkciji getBugsByUserId kreiramo varijable userId i bugs
+-kreiramo folder middleware
+-u folderu middleware kreiramo auth.middleware.js fajl
+-u auth.middleware.js fajlu kreiramo funkciju verifyJwtToken()
+-instaliramo React Router paket
+-u terminal ukucamo komandu npm i react-router-dom
+-instaliramo MUI komponente paket
+-u termina ukucamo komandu npm i 
+-u App.js fajl importujemo React Router komponente
+-kreiramo folder views
+-u folderu views kreiramo jsx komponente
+-u Login.jsx komponentu importujemo MUI komponentu
+-kreiramo state varijable
+-instaliramo axios paket
+-u terminal ukucamo komando npm i axios
+-u Login.jsx komponenti kreiramo funkciju handleLoginUser
+-u terminalu instaliramo cors paket
+-u terminal ukucamo komandu npm i cors
+-u index.js fajl importujemo cors
+-kreiramo app.use(cors( {...}))
+-u komponentu Login.jsx importujemo React Hook useNavigate()
+-kreiramo varijablu const navigate
+-u funkciju handleLoginUser kreiramo try - catch blokove koda
+-u try blok koda dodajemo uslov if 
+-kreiramo komponentu BugDashboard.jsx
+-u terminalu instaliramo React JWT paket
+-u terminal ukucamo komandu npm i react-jwt
